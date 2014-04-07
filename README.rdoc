@@ -1,0 +1,43 @@
+  Minecraft News & Events GUI Sources
+
+=====================================
+
+== Src Files
+
+"GuiServerNews.java"
+
+  The GUI class with everything in it.
+  Requirements: Colors.java and the texture.
+
+"Colors.java"
+
+  A class with color functions such as "Green, Yellow, ..."
+  And some text formatting like: "bold, italic, underline, ..."
+
+
+== Web Files
+
+"news.php"
+
+  A php script to get the GUI text.
+  Every texts/pages are saved in this file.
+
+"Index.php"
+
+  If you want to create a page, you you just have to run it.
+  All the colors and others options are written on the page.
+  NOTE: If you want a line with nothing, you NEED to put a space in it !
+
+"stringcreator.php"
+
+  This script is used when you create a page, you just have to copy the
+  text an paste it in "news.php"
+
+"P437.ttf" And "style.css"
+
+  The font file and the CSS stylesheet for the pages
+
+
+== Changelog
+
+It will come soon...

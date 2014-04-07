@@ -1,0 +1,79 @@
+/* Style Created by AziasCreations */
+
+@font-face { font-family: 'p437'; src: url('P437.ttf'); }
+
+/* Body */
+
+html { min-width: 996px; }
+body { background: #F5EDE0; color: #3C3C3C; font: .78em/1.4 Tahoma, Arial, Helvetica, sans-serif; }
+
+h1, h2, h3, h4, h5 { font-weight: normal; font-family: "p437", Tahoma, sans-serif;}
+h1 { font-size: 1.6em; } h2 { font-size: 1.4em; } h3 { font-size: 1.2em; } h4 { font-size: 1.1em; } h5 { font-size: 1em; }
+p { margin-bottom: .6em; }
+
+a { color: #328aab; text-decoration: underline; outline: none;}
+a:hover { text-decoration: none; }
+a img  { border: 0 none; }
+
+hr { border: 0 none; border-top: 1px solid #dfdede; height: 1px; }
+
+
+/* Site */
+
+#back { width: 100%; overflow-x: hidden; }
+#case { background: #D0C6B8 url("../images/wrpbg.png") repeat-x; width: 960px; text-align: left; margin: 0 auto 18px auto; -moz-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5); box-shadow: 0 0 20px 0 rgba(0,0,0,0.5); }
+#topbar { padding-left: 245px; font-size: .9em; height: 25px; }
+#header { color: #fff; position: relative; z-index: 1; height: 100px; background: #8E8373; }
+	#header h1 { margin-right: 39px; float: left; padding-left: 19px; width: 225px; height: 100px; }
+	#header h1 a { width: 203px; padding-top: 122px; background: url("../images/bigmovie_logo.png"); margin: -9px auto 0 auto; }
+	#htext { margin: 1.5em 0 0; line-height: 1.2em; float: left; font-size: 1.44em; font-family: "p437", Tahoma, sans-serif; }
+	#htext span { font-size: 1.18em; color: #ffcc00; text-transform: uppercase; }
+#footer{ color: #fff; position: relative; z-index: 1; height: 40px; background: #8E8373; }
+
+.story { padding-left: 52px; margin-bottom: 40px; }
+.scont { clear: both; margin-bottom: 20px; }
+.sfoot { width: 100%; height: 44px; padding-left: 72px; background: url("../images/sfoot.png") no-repeat 0 -42px; margin-left: -72px; }
+
+.rpgbold { font-family: "p437", Tahoma, sans-serif; font-size: 1.70em; text-decoration: none; color:#3F3425;}
+.rpgform { font-family: "p437", Tahoma, sans-serif; font-size: 1.50em; text-decoration: none; color:#3F3425;}
+.rpgsubf { font-family: "p437", Tahoma, sans-serif; font-size: 1.28em; text-decoration: none; color:#3F3425;}
+
+.title { font-family: "p437", Tahoma, sans-serif; font-size:25pt; text-decoration: none; color:#3F3425;}
+
+.footertext { font-family: "p437", Tahoma, sans-serif; font-size: 1.35em; text-decoration: none; color:#33291E; line-height: 0.6em; float: right; }
+
+/* Misc */
+
+input, textarea, select {
+	padding:3px;
+	border: 2px solid #9E9180;
+	border-radius:5px;
+	box-shadow:1px 1px 2px #C0C0C0 inset;
+	background: #AFA79C;
+	font-family:"p437", arial;
+}
+
+.button01 {
+	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	display:inline-block;
+	color:#ffffff;
+	font-family:"p437", arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:9px 30px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+.button01:hover { background-color:#b34332;}
+.button01:active { position:relative; top:1px;}
+
+.select01 {
+	overflow: hidden;
+	background: #AFA79C;
+	border: 2px solid #9E9180;
+	font-family:"p437", arial;
+}
