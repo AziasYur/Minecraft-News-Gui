@@ -46,4 +46,24 @@ This Readme will give you some usefull informations about the mod.
 
 == Changelog
 
-It will come soon...
+1.0:
+  *Reduced the text updating time from 4-6 seconds to 0.5 seconds*
+  *Added new formatting options and colors
+  *Buttons and Titles are now customizable
+  *Fixed the mouse movement when closing the GUI
+  *Added a MaxPages Option
+
+0.3
+  *The text is now hosted online
+  *Added the possibility to have pages
+  *Added the colors and the text formatting
+  *Changed the text position system
+  *Changed the GUI texture
+
+0.2
+  *Added the "Event" Button
+  *Added a text positon system
+  *Changed the desing of the GUI
+
+--------------
+*This time was made with an average ping of 145ms.
