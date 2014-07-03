@@ -65,5 +65,9 @@ This Readme will give you some usefull informations about the mod.
   *Added a text positon system
   *Changed the desing of the GUI
 
---------------
-*This time was made with an average ping of 145ms.
+*This time was calculated with an average ping of 145ms.
+
+
+== Terms of use
+
+You are not allowed to get paid for including it in a Mod/Lancher/...
