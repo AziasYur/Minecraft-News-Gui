@@ -46,6 +46,12 @@ This Readme will give you some usefull informations about the mod.
 
 == Changelog
 
+1.1 - Upcoming Update:
+  *Updated to 1.7
+  *Added "Max Pages" option in PHP file
+  *Moved "Pages Names"in PHP file
+  * ? - Error Handling
+
 1.0:
   *Reduced the text updating time from 4-6 seconds to 0.5 seconds*
   *Added new formatting options and colors
