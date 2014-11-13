@@ -59,14 +59,14 @@ This Readme will give you some usefull informations about the mod.
   *Fixed the mouse movement when closing the GUI
   *Added a MaxPages Option
 
-0.3
+0.3:
   *The text is now hosted online
   *Added the possibility to have pages
   *Added the colors and the text formatting
   *Changed the text position system
   *Changed the GUI texture
 
-0.2
+0.2:
   *Added the "Event" Button
   *Added a text positon system
   *Changed the desing of the GUI
