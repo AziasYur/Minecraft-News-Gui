@@ -2,17 +2,17 @@ package net.minecraft.client.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.util.StatCollector;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.stats.AchievementList;
 import net.minecraft.util.ResourceLocation;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
@@ -28,7 +28,6 @@ public class GuiServerNews extends GuiScreen {
 	protected int newsPaneWidth = 256;
 	protected int newsPaneHeight = 232;
 	protected double guiMapX, guiMapY;
-	protected double field_74124_q, field_74123_r, field_74117_m, field_74115_n;
 
 	private static final ResourceLocation serverNewsTextures = new ResourceLocation("textures/gui/server_news.png"); //Put your texture loaction here
 	private String NewsServerURL = "http://localhost/php/NewsGui/news.php"; //Put your page URL here
@@ -60,7 +59,7 @@ public class GuiServerNews extends GuiScreen {
 		try {
 			this.geturlinformation();
 		} catch (IOException e) {
-			this.mc.displayGuiScreen((GuiScreen)null);
+			this.mc.displayGuiScreen(parentScreen);
 			e.printStackTrace();
 		}
 	}
@@ -75,7 +74,7 @@ public class GuiServerNews extends GuiScreen {
 			doSplashes(inputLine);
 		} catch (Exception e) {
 			e.printStackTrace();
-			this.mc.displayGuiScreen((GuiScreen)null);
+			this.mc.displayGuiScreen(parentScreen);
 		}
 		in.close();
 	}
@@ -117,31 +116,6 @@ public class GuiServerNews extends GuiScreen {
 		for(int j = 0; j < 13; j++) {
 			lines[j] = textParts[j].trim();
 		}
-		
-		//Loading Lines Positions - Not working for the moment, for 1.2 or 2.0 update
-		/*linesPosition = new int[13];
-		int title = (this.width - this.newsPaneWidth) / 2 + 20;
-		int text = title+5;
-		int subtext = text+5;
-		if(content.length > 2) {
-			String[] textPos = content[2].split("(?!^)");
-			for(int k=0;k > lines.length; k++){
-				if(textPos[k].equals("a")) {
-					linesPosition[k]=title;
-				} else if(textPos[k].equals("b")) {
-					linesPosition[k]=text;
-				} else if(textPos[k].equals("c")) {
-					linesPosition[k]=subtext;
-				} else {
-					linesPosition[k]=text;
-				}
-			}
-		} else {
-			linesPosition[0]=title;
-			for(int l=1; l<linesPosition.length; l++) {
-				linesPosition[l]=text;
-			}
-		}*/
 	}
 
 	public boolean isPageLockingLeft() {
@@ -164,19 +138,19 @@ public class GuiServerNews extends GuiScreen {
 		this.getpagetext();
 		String bold = Colors.BOLD.toString();
 		this.buttonList.clear();
-		this.buttonList.add(new GuiButton(1, this.width / 2 + 24, (this.height-30) / 2 + 74, 80, 20, StatCollector.translateToLocal("Done")));
-		this.buttonList.add(new GuiButton(4, this.width / 2 + 36 , (this.height + 30) / 2 + 74, 80, 20, StatCollector.translateToLocal(titles[3])));
-		this.buttonList.add(new GuiButton(5, this.width / 2 - 117 , (this.height + 30) / 2 + 74, 80, 20, StatCollector.translateToLocal(titles[1])));
+		this.buttonList.add(new GuiButton(1, this.width / 2 + 24, (this.height-30) / 2 + 74, 80, 20, "Done"));
+		this.buttonList.add(new GuiButton(4, this.width / 2 + 36 , (this.height + 30) / 2 + 74, 80, 20, titles[3]));
+		this.buttonList.add(new GuiButton(5, this.width / 2 - 117 , (this.height + 30) / 2 + 74, 80, 20, titles[1]));
 		GuiButton buttonLeft, buttonRight;
-		this.buttonList.add(buttonLeft = new GuiButton(2, (width - newsPaneWidth) / 2 + 18, (height-30) / 2 + 74, 25, 20, StatCollector.translateToLocal(bold + "<")));
-		this.buttonList.add(buttonRight = new GuiButton(3, (width - newsPaneWidth) / 2 + 74 + 32, (height-30) / 2 + 74, 25, 20, StatCollector.translateToLocal(bold + ">")));
+		this.buttonList.add(buttonLeft = new GuiButton(2, (width - newsPaneWidth) / 2 + 18, (height-30) / 2 + 74, 25, 20, bold + "<"));
+		this.buttonList.add(buttonRight = new GuiButton(3, (width - newsPaneWidth) / 2 + 74 + 32, (height-30) / 2 + 74, 25, 20, bold + ">"));
 		buttonLeft.enabled = this.isPageLockingLeft();
 		buttonRight.enabled = this.isPageLockingRight();
 	}
 
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		if (par1GuiButton.id == 1) {
-			this.mc.displayGuiScreen((GuiScreen)null);
+			this.mc.displayGuiScreen(parentScreen);
 		}
 		
 		//Page -1
@@ -229,36 +203,7 @@ public class GuiServerNews extends GuiScreen {
 				this.fontRendererObj.drawString(lines[k], mtext, ytxt+11*(k-1), 4210752);	
 			}
 		}
-		/*this.fontRendererObj.drawString(lines[0], title, ytitle, 4210752);
-		this.fontRendererObj.drawString(lines[1], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[2], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[3], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[4], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[5], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[6], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[7], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[8], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[9], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[10], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[11], mtext, ytxt, 4210752);ytxt = ytxt+11;
-		this.fontRendererObj.drawString(lines[12], mtext, ytxt, 4210752);ytxt = ytxt+11;*/
 	}
-	
-	/*public void updateScreen() {
-		this.field_74117_m = this.guiMapX;
-		this.field_74115_n = this.guiMapY;
-		double d0 = this.field_74124_q - this.guiMapX;
-		double d1 = this.field_74123_r - this.guiMapY;
-
-		if (d0 * d0 + d1 * d1 < 4.0D) {
-			this.guiMapX += d0;
-			this.guiMapY += d1;
-		}
-		else {
-			this.guiMapX += d0 * 0.85D;
-			this.guiMapY += d1 * 0.85D;
-		}
-	}*/
 
 	protected void drawTitle() {
 		int i = (this.width - this.newsPaneWidth) / 2;
@@ -267,7 +212,7 @@ public class GuiServerNews extends GuiScreen {
 		switch (newsType) {
 			case 0:title = titles[0];break;
 			case 1:title = titles[2];break;
-			default:title = "ERROR !!!";
+			default:title = "Error !";
 		}
 		this.fontRendererObj.drawString(guiTitleTop + title, i + 10, j + 5, 4210752);
 	}
@@ -281,7 +226,6 @@ public class GuiServerNews extends GuiScreen {
 	protected void genNewsBackground(int par1, int par2, float par3) {
 		int i1 = (this.width - this.newsPaneWidth) / 2;
 		int j1 = (this.height - this.newsPaneHeight) / 2;
-		//int k1 = i1 + 16; int l1 = j1 + 17;
 		this.zLevel = 0.0F;
 		GL11.glDepthFunc(GL11.GL_GEQUAL);
 		GL11.glPushMatrix();

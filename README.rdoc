@@ -28,6 +28,11 @@ This Readme will give you some usefull informations about the mod.
   A php script to get the GUI text.
   Every texts/pages are saved in this file.
 
+"newsOptions.php"
+
+  A php files that countains some options for the Gui
+  Current options available: Tabs names, Buttons names, Tabs maxPages
+
 "Index.php"
 
   If you want to create a page, you you just have to run it.
@@ -46,11 +51,22 @@ This Readme will give you some usefull informations about the mod.
 
 == Changelog
 
-1.1 - Upcoming Update:
-  *Updated to 1.7
-  *Added "Max Pages" option in PHP file
-  *Moved "Pages Names"in PHP file
-  * ? - Error Handling
+1.2 - Upcoming Update:
+  *Individual Line Position System
+  *Scroll Bar More or Less Lines per Page
+  *Improved Error Handling
+  *Reworked "news.php" & News Writer
+  *Support for MySQL, for 1.3 ?
+  *?
+
+1.1:
+  *Updated to 1.7.10
+  *Added MaxPages Option to Each Tab in PHP file
+  *Added Customizable Tab Name in PHP file
+  *Added Options File in WebFiles
+  *Optimized Text Loading
+  *Fixed the Missing "ParentScreen" when quitting
+  *Removed Some Leftovers
 
 1.0:
   *Reduced the text updating time from 4-6 seconds to 0.5 seconds*
@@ -77,3 +93,4 @@ This Readme will give you some usefull informations about the mod.
 == Terms of use
 
 You are not allowed to get paid for including it in a Mod/Lancher/...
+You can use it in your own mods and modify at your will.
