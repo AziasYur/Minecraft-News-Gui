@@ -4,34 +4,24 @@
   | |\/| | | '_ \ / _ \/ __| '__/ _` |  _| __| | . ` |/ _ \ \ /\ / / __| | | __| | | | | |
   | |  | | | | | |  __/ (__| | | (_| | | | |_  | |\  |  __/\ V  V /\__ \ | |_\ \ |_| |_| |_
   \_|  |_/_|_| |_|\___|\___|_|  \__,_|_|  \__| \_| \_/\___| \_/\_/ |___/  \____/\___/ \___/
-  V1.0
+  V1.3.0
 
 This Readme will give you some usefull informations about the mod.
-
-== Src Files
-
-"GuiServerNews.java"
-
-  The GUI class with everything in it.
-  Requirements: Colors.java and the texture.
-
-"Colors.java"
-
-  A class with color functions such as "Green, Yellow, ..."
-  And some text formatting like: "bold, italic, underline, ..."
-
 
 == Web Files
 
 "news.php"
 
   A php script to get the GUI text.
-  Every texts/pages are saved in this file.
 
 "newsOptions.php"
 
-  A php files that countains some options for the Gui
-  Current options available: Tabs names, Buttons names, Tabs maxPages
+  A php files that countains some options for the Gui.
+  Current options available: Tabs names, Buttons names.
+
+"newsContent.php"
+
+  A php file that countains all the pages content.
 
 "Index.php"
 
@@ -51,13 +41,21 @@ This Readme will give you some usefull informations about the mod.
 
 == Changelog
 
-1.2 - Upcoming Update:
-  *Individual Line Position System
-  *Scroll Bar More or Less Lines per Page
-  *Improved Error Handling
-  *Reworked "news.php" & News Writer
-  *Support for MySQL, for 1.3 ?
-  *?
+1.3 - Content Update:
+  *Updated to Minecraft 1.8
+  *Added individual line position system
+  *Added scrolling buttonsScrolling Bar for 13+ lines pages
+  *Revamped "news.php"
+  *Switched to Minecraft text formatting
+  *Removed ApiColors and StopWatch
+
+1.2 - Bug Killer Update:
+  *Updated to Forge 1.7.10
+  *Added the possibility to have less than 13 lines on a page.
+  *Improved Error Handling, custom error messages and anti-crashing Exceptions
+  *Added a debug menu to test error handling
+  *Added the possibility to navigate with keys
+  *Added the options to exit the Gui when there is an error
 
 1.1:
   *Updated to 1.7.10
@@ -93,4 +91,5 @@ This Readme will give you some usefull informations about the mod.
 == Terms of use
 
 You are not allowed to get paid for including it in a Mod/Lancher/...
-You can use it in your own mods and modify at your will.
+You are not allowed to claim it as your creation.
+You can use it in your own mods and modify at your will, just give credit if you feel like it.

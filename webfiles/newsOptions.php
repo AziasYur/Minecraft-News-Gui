@@ -1,11 +1,26 @@
 <?php
-//Left Tab1 - default: "Updates"
-$Tab1Title = "Updates Changelogs";
-$Tab1ButtonName  = "Updates";
-$Tab1MaxPages = 4;
+  /**
+   * In this file you will be able to change to options.
+   * Just change the text between quotes.
+   */
 
-//Right Tab2 - default: "Events"
-$Tab2Title = "Upcoming Events";
-$Tab2ButtonName  = "Events";
-$Tab2MaxPages = 3;
+  //Left Tab - GUI Title
+  $Tab1Title = "Updates Changelogs";
+  //Left Tab - Button Title
+  $Tab1ButtonName  = "Updates";
+
+  //Right Tab - GUI Title
+  $Tab2Title = "Upcoming Events";
+  //Right Tab - Button Title
+  $Tab2ButtonName  = "Events";
+
+  //These values are obselete, they are still here for developement
+  //Don't touch them.
+  $Tab2MaxPages = 3;
+  $Tab1MaxPages = 5;
+
+  /**
+   * Made by AziasCreations
+   * aziascreations.deviantart.com
+   */
 ?>
